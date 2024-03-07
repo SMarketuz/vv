@@ -25,7 +25,9 @@ const Contact = () => {
             "message": val.message
         }, {
             headers: {
-                "token": localStorage.getItem('token')
+                "token": localStorage.getItem('token'),
+                "ngrok-skip-browser-warning": true,
+                "Access-Control-Allow-Origin": "*",
             }
         }).then(res => {
             if(res.data.status == true ) {

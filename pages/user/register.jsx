@@ -53,6 +53,11 @@ const Register = () => {
                 "phone": result,
                 "username": values.username,
                 "password": values.password
+            } , {
+                headers: {
+                    "ngrok-skip-browser-warning": true,
+                    "Access-Control-Allow-Origin": "*",
+                }
             }).then(res => {
                 router.push('/user/login')
             }).catch(er => {

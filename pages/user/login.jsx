@@ -34,6 +34,11 @@ const Login = () => {
             axios.post(`${api}api/user/auth/login`, {
                 "username": values.username,
                 "password": values.password
+            }, {
+                headers: {
+                    "ngrok-skip-browser-warning": true,
+                    "Access-Control-Allow-Origin": "*",
+                }
             }).then(res => {
                 router.push('/')
                 localStorage.setItem('token' , res.data.token)

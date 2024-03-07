@@ -10,7 +10,12 @@ const FutureCourse = () => {
   const [loader , setLoader] = useState(true)
 
   useEffect(() => {
-    axios.get(`${api}api/future/get`)
+    axios.get(`${api}api/future/get` , {
+      headers: {
+        "ngrok-skip-browser-warning": true,
+        "Access-Control-Allow-Origin": "*",
+      }
+    })
       .then(res => {
         setData(res.data.data)
         setLoader(false)

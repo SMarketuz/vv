@@ -25,7 +25,9 @@ const TopContent = () => {
                     "email": email
                 },{
                     headers: {
-                        'token': localStorage.getItem('token')
+                        'token': localStorage.getItem('token'),
+                        "ngrok-skip-browser-warning": true,
+                        "Access-Control-Allow-Origin": "*",
                     }
                 }).then(res => {
                     setEmail('')

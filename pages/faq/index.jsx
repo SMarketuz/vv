@@ -19,7 +19,12 @@ const Faq = () => {
     const [data, setData] = useState([])
     const [loader, serLoader] = useState(true)
     useEffect(() => {
-        axios.get(`${api}api/faq/get`)
+        axios.get(`${api}api/faq/get` , {
+            headers: {
+                "ngrok-skip-browser-warning": true,
+                "Access-Control-Allow-Origin": "*",
+            }
+        })
             .then(res => {
                 setData(res.data.data)
                 serLoader(false)

@@ -32,7 +32,9 @@ const Navbar = () => {
         if (localStorage.getItem('token')) {
             axios.get(`${api}api/user/get/one`, {
                 headers: {
-                    'token': localStorage.getItem('token')
+                    'token': localStorage.getItem('token'),
+                    "ngrok-skip-browser-warning": true,
+                    "Access-Control-Allow-Origin": "*",
                 }
             }).then(res => {
                 setData(res.data.username)
