@@ -1,4 +1,4 @@
-import Logo from './logo.png'
+import Logo from './Logo.png'
 import reactjs from './reactjs.png'
 import nextjs from './nextjs.png'
 import js from './javascript.png'
