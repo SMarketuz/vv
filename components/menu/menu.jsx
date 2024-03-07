@@ -62,10 +62,11 @@ const Menuu = ({ data }) => {
                         <br />
 
                         <Flex gap={'20px'} flexDirection={'column'} justifyContent={'flex-end'} alignItems={'center'}>
+                            <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'/'}>BOSH SAHIFA</Link>
                             <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'/faq'}>FAQ</Link>
-                            <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'#'}>A’LOQA</Link>
-                            <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'#'}>IZOHLAR</Link>
-                            <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'#'}>FOIDALI</Link>
+                            <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'/contact'}>MUROJAT</Link>
+                            {/* <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'#'}>IZOHLAR</Link> */}
+                            <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'/downloads'}>YUKLAMALAR</Link>
                         </Flex>
                         <br />
                         {show && <Box display={{ base: 'block', md: 'none' }}>
