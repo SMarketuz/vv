@@ -15,6 +15,7 @@ const Texnalogi = () => {
     axios.get(`${api}api/text/get` , {headers: {
       "ngrok-skip-browser-warning": true,
       "Access-Control-Allow-Origin": "*",
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
     }})
       .then(res => {
         setData(res.data.data);
