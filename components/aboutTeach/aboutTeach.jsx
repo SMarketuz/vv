@@ -9,7 +9,7 @@ import { car1, car2, car3, car4, car5, car6, car7, car8 } from '@/public';
 const AboutTeach = () => {
     return (
         <Box minH={'75vh'}>
-            <Box width={'100%'} h={'650px'} bg={'#091629'} position={'relative'}>
+            <Box width={'100%'} h={'650px'} bg={'#091629'} position={'relative'} overflow={'hidden'}>
                 <Box className='shadoww'>
 
                 </Box>

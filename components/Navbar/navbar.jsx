@@ -37,7 +37,12 @@ const Navbar = () => {
                     "Access-Control-Allow-Origin": "*",
                 }
             }).then(res => {
+                
                 setData(res.data.username)
+            }).catch(err => {
+                if(err) {
+                    localStorage.clear()
+                }
             })
         }
     }, [data])

@@ -8,7 +8,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { CiFlag1 } from "react-icons/ci";
 const Desc = () => {
     return (
-        <Box   mt={'200px'} bg={'#091629'} h={{base: '100%' , md: '450px'}} w={'100%'} color={'white'} p={10}  display={'flex'} alignItems={'center'} position={'relative'}>
+        <Box  overflow={'hidden'}  mt={'200px'} bg={'#091629'} h={{base: '100%' , md: '450px'}} w={'100%'} color={'white'} p={10}  display={'flex'} alignItems={'center'} position={'relative'}>
             <Box  display={'flex'} gap={20} position={'relative'} zIndex={100} justifyContent={'space-evenly'} width={'100%'} color={'#1C3554'} flexWrap={'wrap'} className='wrapper ' alignItems={'center'}>
                 <Box gap={5} fontSize={'32px'} color='#fff' textAlign={'center'} fontWeight={'bold'} justifyContent={'center'} alignItems={'center'} display={'flex'} flexDirection={'column'}>
                     <GoVideo fontSize={'70px'} />

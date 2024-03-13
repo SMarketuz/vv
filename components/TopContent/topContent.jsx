@@ -99,7 +99,7 @@ const TopContent = () => {
 
                             <Flex alignItems={'center'} gap={2} fontSize={'24px'} fontWeight={'bold'}>
                                 <GoVideo />
-                                <Text>10+ Kurslar</Text>
+                                <Text>10+ Darslar</Text>
                             </Flex>
                         </Flex>
                     </Box>
