@@ -63,7 +63,7 @@ const Navbar = () => {
                         {/* <Link style={{ fontSize: '17px', color: '#1C3554', fontWeight: 'bold' }} href={'#'}>IZOHLAR</Link> */}
                         {/* <Link style={{ fontSize: '17px', color: '#1C3554', fontWeight: 'bold' }} href={'#'}>FOIDALI</Link> */}
                         <Link className={`link ${pathname === '/contact' ? 'active' : ''}`} style={{ fontSize: '17px', color: '#1C3554', fontWeight: 'bold' }} href={'/contact'}>MUROJAT</Link>
-                        <Link className={`link ${pathname === '/downloads' ? 'active' : ''}`} style={{ fontSize: '17px', color: '#1C3554', fontWeight: 'bold' }} href={'/downloads'}>YUKLAMALAR</Link>
+                        {/* <Link className={`link ${pathname === '/downloads' ? 'active' : ''}`} style={{ fontSize: '17px', color: '#1C3554', fontWeight: 'bold' }} href={'/downloads'}>YUKLAMALAR</Link> */}
                     </Flex>
                 </Box>
 

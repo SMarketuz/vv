@@ -27,6 +27,8 @@ import Footer from '@/components/Footer/footer'
 import Link from 'next/link'
 import axios from 'axios'
 import { api } from '@/api/api'
+import { IoIosVideocam , IoMdCard } from "react-icons/io";
+import { FaRegChartBar } from "react-icons/fa";
 const VideoID = () => {
   const router = useRouter()
   const videoId = router.query.videoId ? router.query.videoId : '65ee5c2e9c67a13b338a46b4'
@@ -34,6 +36,9 @@ const VideoID = () => {
   const [count, setCount] = useState([])
   const [videos, setVideos] = useState([])
   const [videosName, setVideosName] = useState([])
+  const [fakt, setFakt] = useState('')
+  const [fakt2, setFakt2] = useState('')
+  const [level, setLevel] = useState('')
 
   useEffect(() => {
     axios.get(`${api}api/video/get/by-category?course=${videoId}`)
@@ -41,9 +46,17 @@ const VideoID = () => {
         setData(res.data.data[0]);
         setCount(res.data.data);
         setVideos(res.data.data);
+        setFakt(res.data.data[0]?.course.fakt)
+        setLevel(res.data.data[0]?.course.level)
       })
   }, [videoId])
 
+  useEffect(() => {
+    axios.get(`${api}api/fakt/get/byID/${fakt ? fakt : '65f2a2eb7c77ad1975761b24'}`)
+      .then(res => {
+        setFakt2(res.data)
+      })
+  }, [])
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [size, setSize] = useState('md')
   const [nameVideo, setNameVideo] = useState('')
@@ -70,8 +83,11 @@ const VideoID = () => {
               <Heading>{data ? data?.course?.title + "ni mukammal o'rganing" : 'Darslik Mavjud emas'}</Heading><br />
               <Text fontSize={'18px'} maxW={'700px'}>{data ? data?.course?.information : 'Darslik Mavjud emas'}</Text>
               <br /><br />
-
-              <Text color={'#3F9CFB'} fontWeight={'bold'} fontSize={'20px'}>Darslar soni {count.length} ta</Text>
+              <Box display={'flex'} alignItems={'center'} gap={3} flexDirection={{base: 'column' , md: 'row'}}>
+                <Text color={'#3F9CFB'} fontWeight={'bold'} fontSize={'20px'} display={'flex'} alignItems={'center' } gap={2}><IoIosVideocam /> Darslar soni {count.length} ta</Text>
+                <Text color={'#3F9CFB'} fontWeight={'bold'} fontSize={'20px'} display={'flex'} alignItems={'center' } gap={2}><FaRegChartBar /> Daraja {level}</Text>
+                <Text color={'#3F9CFB'} fontWeight={'bold'} fontSize={'20px'} display={'flex'} alignItems={'center' } gap={2}><IoMdCard />Sertifikan yo'q</Text>
+              </Box>
             </Box>
 
             <Box>
@@ -99,9 +115,9 @@ const VideoID = () => {
 
           <Box width={{ base: '100%', md: '30%' }} h={'100%'} p={3} border={'1px'} rounded={'10px'} borderColor={'#3F9CFB'} display={'flex'} flexDirection={'column'} gap={4}>
             <Box className='line2' >
-              <Image src={reactjs}></Image>
+              <video src={`${api}videos/${fakt2.video}`} controls></video>
             </Box>
-
+            <Box><Heading fontSize={'20px'}>Kurs haqida ma'lumot</Heading></Box>
             <Box><Heading>Bepul</Heading></Box>
             <Divider />
             <Button onClick={() => {

@@ -43,7 +43,7 @@ const Faq = () => {
             <Box minH={'40vh'} px={5}>
                 <Box className='wrapper borderLeft' h={'100%'} p={10} bg={'#091629'} roundedTopRight={'8px'} roundedBottomRight={'8px'} color={'white'} display={'flex'} w={'100%'} flexDirection={'column'} gap={10}>
                     <Box>
-                        <Heading>Ko'p Beriladigan Savollar</Heading>
+                        <Heading>Tez-tez so'raladigan savollar</Heading>
                     </Box>
                     <Box display={'flex'} flexDirection={'column-reverse'}>
                         {data.map((item, i) => (
