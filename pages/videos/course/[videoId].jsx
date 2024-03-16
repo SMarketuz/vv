@@ -36,27 +36,30 @@ const VideoID = () => {
   const [count, setCount] = useState([])
   const [videos, setVideos] = useState([])
   const [videosName, setVideosName] = useState([])
-  const [fakt, setFakt] = useState('')
-  const [fakt2, setFakt2] = useState('')
   const [level, setLevel] = useState('')
 
   useEffect(() => {
-    axios.get(`${api}api/video/get/by-category?course=${videoId}`)
+    axios.get(`${api}api/video/get/by-category?course=${videoId}` , {
+      headers: {
+        "ngrok-skip-browser-warning": true,
+        "Access-Control-Allow-Origin": "*",
+    }
+    })
       .then(res => {
         setData(res.data.data[0]);
         setCount(res.data.data);
         setVideos(res.data.data);
-        setFakt(res.data.data[0]?.course.fakt)
         setLevel(res.data.data[0]?.course.level)
       })
   }, [videoId])
 
-  useEffect(() => {
-    axios.get(`${api}api/fakt/get/byID/${fakt ? fakt : '65f2a2eb7c77ad1975761b24'}`)
-      .then(res => {
-        setFakt2(res.data)
-      })
-  }, [])
+  // useEffect(() => {
+  //   axios.get(`${api}api/fakt/get/byID/${fakt ? fakt : '65f2a2eb7c77ad1975761b24'}`)
+  //     .then(res => {
+  //       setFakt2(res.data.data)
+  //     })
+  // }, [])
+
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [size, setSize] = useState('md')
   const [nameVideo, setNameVideo] = useState('')
@@ -115,7 +118,7 @@ const VideoID = () => {
 
           <Box width={{ base: '100%', md: '30%' }} h={'100%'} p={3} border={'1px'} rounded={'10px'} borderColor={'#3F9CFB'} display={'flex'} flexDirection={'column'} gap={4}>
             <Box className='line2' >
-              <video src={`${api}videos/${fakt2.video}`} controls></video>
+              {/* <video src={`${api}videos/${fakt2.video}`} controls></video> */}
             </Box>
             <Box><Heading fontSize={'20px'}>Kurs haqida ma'lumot</Heading></Box>
             <Box><Heading>Bepul</Heading></Box>

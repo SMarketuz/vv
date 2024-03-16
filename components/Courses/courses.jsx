@@ -14,7 +14,12 @@ const Courses = () => {
     const [pres, setPres] = useState([])
     const [apis, setApis] = useState('api/course/category')
     useEffect(() => {
-        axios.get(`${api}${apis}`)
+        axios.get(`${api}${apis}` , {
+            headers: {
+                "ngrok-skip-browser-warning": true,
+                "Access-Control-Allow-Origin": "*",
+            }
+        })
             .then(res => {
                 setData(res.data.data)
                 setPres(res.data.data)

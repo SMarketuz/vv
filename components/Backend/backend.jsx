@@ -8,7 +8,12 @@ const Backend = () => {
     const [data, setData] = useState([])
     const [apis, setApis] = useState('api/course/category?badge=Backend')
     useEffect(() => {
-        axios.get(`${api}${apis}`)
+        axios.get(`${api}${apis}` ,{
+            headers: {
+                "ngrok-skip-browser-warning": true,
+                "Access-Control-Allow-Origin": "*",
+            }
+        })
             .then(res => {
                 setData(res.data.data)
             })
