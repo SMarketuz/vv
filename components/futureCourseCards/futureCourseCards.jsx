@@ -8,7 +8,7 @@ import { api } from '@/api/api'
 const FutureCourseCards = ({item}) => {
     return (
         <Box>
-            <Card maxW={{ base: '100%', md: 'md' }} border={'1px'} borderColor={'#3F9CFB'} >
+            <Card maxW={{ base: '100%', md: 'md' }} border={'1px'} borderColor={'#3F9CFB'} bg={'transparent'}>
                 <CardBody>
                     <Box position={'relative'} className='line'>
                         <img
@@ -24,7 +24,7 @@ const FutureCourseCards = ({item}) => {
                             <Text>Chiqish vaqti</Text>
                             <Text>{item.production}</Text>
                         </Box>
-                        <Heading color={'#1C3554'} fontWeight={'bold'} size='md'>{item.title}</Heading>
+                        <Heading color={'#fff'} fontWeight={'bold'} size='md'>{item.title}</Heading>
                     </Stack>
                 </CardBody>
             </Card>

@@ -52,7 +52,7 @@ const TopContent = () => {
     }
     return (
         <Box className='wrapper' px={5} width={'100%'}>
-            <Box width={'100%'} p={10} color={'white'} position={'relative'} display={'flex'} justifyContent={'space-between'} rounded={10} bg={'#091629'}>
+            <Box width={'100%'} p={10} color={'white'} position={'relative'} display={'flex'} justifyContent={'space-between'} rounded={10} bg={'#091629'}  overflow={'hidden'}>
                 <Box color={'white'} w={{ base: '150px', md: '300px', xl: '600px' }} h={{ base: '150px', md: '300px', xl: '500px' }} className='shadow' rounded={'50%'} ></Box>
 
                 <Box display={'flex'} flexDirection={{ base: 'column', xl: 'row' }} justifyContent={'space-between'} width={'100%'} gap={10}>

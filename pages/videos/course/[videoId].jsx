@@ -36,7 +36,9 @@ const VideoID = () => {
   const [count, setCount] = useState([])
   const [videos, setVideos] = useState([])
   const [videosName, setVideosName] = useState([])
+  const [fakt2, setFakt2] = useState([])
   const [level, setLevel] = useState('')
+  console.log(data);
 
   useEffect(() => {
     axios.get(`${api}api/video/get/by-category?course=${videoId}` , {
@@ -53,12 +55,12 @@ const VideoID = () => {
       })
   }, [videoId])
 
-  // useEffect(() => {
-  //   axios.get(`${api}api/fakt/get/byID/${fakt ? fakt : '65f2a2eb7c77ad1975761b24'}`)
-  //     .then(res => {
-  //       setFakt2(res.data.data)
-  //     })
-  // }, [])
+  useEffect(() => {
+    axios.get(`${api}api/fakt/get/byID/${'66040cde2d398a81a54451eb'}`)
+      .then(res => {
+        setFakt2(res.data)
+      })
+  }, [])
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [size, setSize] = useState('md')
@@ -118,7 +120,7 @@ const VideoID = () => {
 
           <Box width={{ base: '100%', md: '30%' }} h={'100%'} p={3} border={'1px'} rounded={'10px'} borderColor={'#3F9CFB'} display={'flex'} flexDirection={'column'} gap={4}>
             <Box className='line2' >
-              {/* <video src={`${api}videos/${fakt2.video}`} controls></video> */}
+              <video src={`${api}videos/${fakt2.video}`} controls></video>
             </Box>
             <Box><Heading fontSize={'20px'}>Kurs haqida ma'lumot</Heading></Box>
             <Box><Heading>Bepul</Heading></Box>

@@ -27,7 +27,7 @@ const Texnalogi = () => {
     <Box px={5} minH={'100%'} display={'flex'} mt={20}>
       <Box className='wrapper' display={'flex'} flexDirection={'column'} gap={20}>
         <Box textAlign={'center'}>
-          <Heading fontSize={{ base: '30px', md: '48px' }} color={'#1C3554'}>Mashxur texnalogiyalar</Heading>
+          <Heading fontSize={{ base: '30px', md: '48px' }} color={'#fff'}>Mashxur texnalogiyalar</Heading>
         </Box>
 
         <Box display={'flex'} gap={20} className='imgHov' flexWrap={'wrap'} justifyContent={'center'} alignItems={'center'} >

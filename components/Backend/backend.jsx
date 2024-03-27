@@ -20,7 +20,7 @@ const Backend = () => {
     }, [apis])
     return (
         <>
-            {data.length &&  data.map((item, i) => (
+            {data.length && data.map((item, i) => (
                 <Box border={'2px'} borderColor={'#3F9CFB'} borderRadius={'10px'}>
                     <motion.div
                         initial={{ opacity: 0, translateX: -50 }}

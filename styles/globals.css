@@ -1,9 +1,10 @@
 * {
     outline: none !important;
 }
-/* body {
+body {
     background: #020817 !important;
-} */
+    color: white !important;
+}
 .wrapper {
     max-width: 1636px !important;
     margin: 10px auto !important;

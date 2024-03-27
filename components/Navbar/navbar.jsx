@@ -47,7 +47,7 @@ const Navbar = () => {
         }
     }, [data])
     return (
-        <Box bg={'white'} boxShadow={'2xl'} position={'fixed'} w={'100%'} px={5} zIndex={1000}>
+        <Box bg={'#020817'} boxShadow={'2xl'} borderBottom={'1px'} borderColor={'#3E9CFA'} position={'fixed'} w={'100%'} px={5} zIndex={1000}>
             <Flex alignItems={'center'} className='wrapper' justifyContent={'space-between'} fd>
                 <Link href={'/'}>
                     <Box display={'flex'} alignItems={'center'} gap={1}>
@@ -58,11 +58,11 @@ const Navbar = () => {
 
                 <Box display={{ base: 'none', md: 'none', lg: 'block' }} className='navbar_links'>
                     <Flex gap={'30px'}>
-                        <Link className={`link ${pathname === '/' ? 'active' : ''}`} style={{ fontSize: '17px', color: '#1C3554', fontWeight: 'bold' }} href={'/'}>BOSH SAHIFA</Link>
-                        <Link className={`link ${pathname === '/faq' ? 'active' : ''}`} style={{ fontSize: '17px', color: '#1C3554', fontWeight: 'bold' }} href={'/faq'}>FAQ</Link>
+                        <Link className={`link ${pathname === '/' ? 'active' : ''}`} style={{ fontSize: '17px', color: '#fff', fontWeight: 'bold' }} href={'/'}>BOSH SAHIFA</Link>
+                        <Link className={`link ${pathname === '/faq' ? 'active' : ''}`} style={{ fontSize: '17px', color: '#ffff', fontWeight: 'bold' }} href={'/faq'}>FAQ</Link>
                         {/* <Link style={{ fontSize: '17px', color: '#1C3554', fontWeight: 'bold' }} href={'#'}>IZOHLAR</Link> */}
                         {/* <Link style={{ fontSize: '17px', color: '#1C3554', fontWeight: 'bold' }} href={'#'}>FOIDALI</Link> */}
-                        <Link className={`link ${pathname === '/contact' ? 'active' : ''}`} style={{ fontSize: '17px', color: '#1C3554', fontWeight: 'bold' }} href={'/contact'}>MUROJAT</Link>
+                        <Link className={`link ${pathname === '/contact' ? 'active' : ''}`} style={{ fontSize: '17px', color: '#fff', fontWeight: 'bold' }} href={'/contact'}>MUROJAT</Link>
                         {/* <Link className={`link ${pathname === '/downloads' ? 'active' : ''}`} style={{ fontSize: '17px', color: '#1C3554', fontWeight: 'bold' }} href={'/downloads'}>YUKLAMALAR</Link> */}
                     </Flex>
                 </Box>

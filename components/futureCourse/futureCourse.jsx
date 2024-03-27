@@ -25,7 +25,7 @@ const FutureCourse = () => {
     <Box width={'100%'}   display={'flex'} justifyContent={'center'} alignItems={'flex-start'}>
       <Box className='wrapper' display={'flex'} mx={5} flexDirection={'column'} gap={20} justifyContent={'center'} alignItems={'center'}>
         <Box>
-          <Heading fontSize={{ base: '25px', md: '50px' }} color={'#1C3554'}>Kutilayotgan kurslar.</Heading>
+          <Heading fontSize={{ base: '25px', md: '50px' }} color={'#fff'}>Kutilayotgan kurslar.</Heading>
         </Box>
 
         <Flex gap={10} flexWrap={'wrap'} justifyContent={'center'}>
