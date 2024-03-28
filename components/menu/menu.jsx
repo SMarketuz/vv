@@ -38,7 +38,7 @@ const Menuu = ({ data }) => {
     return (
         <>
             <Button ref={btnRef} bg={'transparent'} fontSize={'40px'} _active={{ bg: '' }} _hover={{ bg: '' }} onClick={onOpen}>
-                <HamburgerIcon />
+                <HamburgerIcon bg={'white'} rounded={'8px'} />
             </Button>
             <Drawer
                 isOpen={isOpen}
@@ -52,7 +52,7 @@ const Menuu = ({ data }) => {
 
                         <Box display={'flex'} alignItems={'center'} gap={1} borderBottom={'1px'} pb={3} borderColor={'gray'}>
                             <Image src={Logo} style={{ width: '40px' }}></Image>
-                            <Heading>MOdevco</Heading>
+                            <Heading color={'#3E9CFA'}>MOdevco</Heading>
                         </Box>
                         <br />
                        {!show &&  <Flex alignItems={'center'} gap={3} cursor={'pointer'} flexDirection={'column'} borderBottom={'1px'} pb={3} borderColor={'gray'}>
@@ -66,7 +66,7 @@ const Menuu = ({ data }) => {
                             <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'/faq'}>FAQ</Link>
                             <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'/contact'}>MUROJAT</Link>
                             {/* <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'#'}>IZOHLAR</Link> */}
-                            <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'/downloads'}>YUKLAMALAR</Link>
+                            {/* <Link style={{ fontSize: '20px', color: '#1C3554', fontWeight: 'bold' }} href={'/downloads'}>YUKLAMALAR</Link> */}
                         </Flex>
                         <br />
                         {show && <Box display={{ base: 'block', md: 'none' }}>

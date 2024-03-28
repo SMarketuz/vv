@@ -70,7 +70,7 @@ const Navbar = () => {
                 {show && <Box display={{ base: 'none', md: 'none', lg: 'block' }}>
                     <Flex gap={10}>
                         <Link href={'/user/login'}>
-                            <Button variant={'outline'} border={'1px'} borderColor={'#3F9CFB'} width={'154px'} h={'51px'}>Kirish</Button>
+                            <Button variant={'outline'} border={'1px'} color={'#fff'} borderColor={'#3F9CFB'} width={'154px'} h={'51px'} _hover={{bg: ''}} _active={{bg: ''}}>Kirish</Button>
                         </Link>
                         <Link href={'/user/register'}>
                             <Button bg={'#3F9CFB'} color={'white'} _hover={{ bg: '' }} _active={{ bg: '' }} width={'203px'} h={'51px'}>RO’YHATDAN O’TISH</Button>

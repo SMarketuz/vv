@@ -68,26 +68,26 @@ const Login = () => {
                 <Box p={{base: 10 , lg: '120px'}} display={'flex'} flexDirection={'column'} gap={10}>
                     <Link href={'/'}>
                         <Flex gap={2} alignItems={'center'}>
-                            <Image width={'50'} src={Logo}></Image>
+                            <Image  width={'50'} src={Logo}></Image>
                             <Heading color={'#3F9CFB'}>MOdevco</Heading>
                         </Flex>
                     </Link>
 
                     <Box>
-                        <Heading fontSize={{base: '40px' , lg: '60px'}} color={'#1C3554'}>Kirish!</Heading><br />
+                        <Heading fontSize={{base: '40px' , lg: '60px'}} color={'#ffff'}>Kirish!</Heading><br />
                         <Text fontSize={'18px'} color={'gray'} maxW={'500px'}>Ro'yxatdan o'tishingiz platformani sifatini yahshilash uchun hizmat qilishi mumkin. Siz uchun platformadan to'liq foidalanish imkonini beradi.</Text>
                     </Box>
 
                     <Flex flexDirection={'column'} gap={5}>
                         <FormControl isRequired>
                             <FormLabel>Foidalanuvchi nomi</FormLabel>
-                            <Input value={values.username} onChange={(e) => setValues({ ...values, username: e.target.value })} bg={'#F3F4F6'} type='text' placeholder={'nom...'} h={'50px'} />
+                            <Input color={'#000'} value={values.username} onChange={(e) => setValues({ ...values, username: e.target.value })} bg={'#F3F4F6'} type='text' placeholder={'nom...'} h={'50px'} />
                         </FormControl>
 
                         <FormControl isRequired>
                             <FormLabel>Foidalanuvchi paroli</FormLabel>
                             <Box display={'flex'} alignItems={'center'} h={'50px'}  bg={'#F3F4F6'} border={'1px'} rounded={'5px'} borderColor={'#E2E8F0'}>
-                                <Input
+                                <Input color={'#000'}
                                     type={show ? 'text' : 'password'}
                                    placeholder={'parol...'} 
                                    style={{border: 'none' }}
@@ -111,7 +111,7 @@ const Login = () => {
 
 
                 <Box  display={{base: 'none', md: 'none' , lg: 'block'}}>
-                    <Image src={login} width={'793'} height={'100%'}></Image>
+                    <Image className='auth_img' src={login} width={'793'} height={'100%'}></Image>
                 </Box>
 
 
