@@ -108,7 +108,7 @@ body {
 
 .auth_img {
     filter: grayscale(20%) !important;
-}
+} 
 
 @media (max-width: 1280px) {
     .navbar_links {
